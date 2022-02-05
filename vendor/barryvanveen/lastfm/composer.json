@@ -1,0 +1,64 @@
+{
+    "name": "barryvanveen/lastfm",
+    "type": "library",
+    "description": "Last.fm API client for PHP 7+",
+    "keywords": [
+        "lastfm",
+        "last.fm",
+        "api",
+        "client",
+        "php7",
+        "laravel",
+        "laravel5",
+        "service provider"
+    ],
+    "homepage": "https://github.com/barryvanveen/lastfm",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Barry van Veen",
+            "email": "barryvanveen@gmail.com",
+            "homepage": "https://barryvanveen.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "~5.0||~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Barryvanveen\\Lastfm\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "vendor/bin/php-cs-fixer fix --dry-run",
+        "fix-style": "vendor/bin/php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Barryvanveen\\Lastfm\\LastfmServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "support": {
+        "issues": "https://github.com/barryvanveen/lastfm/issues"
+    }
+}
